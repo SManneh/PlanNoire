@@ -1,5 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     const Vendors = sequelize.define('Vendors', {
+      image: {
+        type: DataTypes.STRING
+      },
       name: {
         type: DataTypes.STRING
       },

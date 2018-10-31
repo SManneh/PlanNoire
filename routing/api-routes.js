@@ -9,7 +9,7 @@ module.exports = function(app) {
     // GET Request
     // Responds with all the vendors
     app.get('/api/vendors', function(req, res) {
-      db.Product.findAll({}).then(function(rows) {
+      db.Vendors.findAll({}).then(function(rows) {
         res.json(rows)
       }).catch(function(error) {
         res.json({ error: error });
