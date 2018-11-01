@@ -2,6 +2,14 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+
 
 $.ajax({
     url:"/api/vendors",
@@ -10,8 +18,8 @@ $.ajax({
     console.log(response)
     for(let i = 0; i < response.length; i++){
         let item = response[i];
-        let cardDiv = $('<div>').addClass('card');
-        let image = $('<img>').attr('src', item.image);
+        let cardDiv = $('<div>').addClass('card')
+        let image = $('<img>').attr('src', item.image).attr('width', "300").attr('width', "300")
         let h2 = $('<h2>').text(item.name);
         let price = $('<p>').text(item.vendor_category);
         let submit = $('<button>').text('More Info').addClass('submit').attr('data-target', "modal1").addClass('modal-trigger');

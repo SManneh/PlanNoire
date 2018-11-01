@@ -1,18 +1,26 @@
 .nav-wrapper {
 padding: 30px;
+background-color: #E5A3AD;
+margin-bottom: 20px
 }
 
 img{
     width:100
 }
 
+h2 {
+    font-size: 24px
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
+    /* max-height: 300px; */
     margin: 2%;
     text-align: center;
     font-family: arial;
     float: left;
+    font-size: small
   }
   
   .price {
@@ -25,7 +33,7 @@ img{
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #f45b69;
+    background-color: #E5A3AD;
     text-align: center;
     cursor: pointer;
     width: 100%;

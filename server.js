@@ -65,7 +65,7 @@ db.sequelize.sync().then(function() {
   });
 
   db.Vendors.create({
-    image:"./images/djrell.jpg",
+    image:"./images/djebou.jpeg",
     name:"DJ Ebou",
     vendor_category:"Deejay",
     phone_number:"4692126636",
