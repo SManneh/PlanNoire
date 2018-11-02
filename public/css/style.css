@@ -16,7 +16,7 @@ width: 100%
 }
 
 .indicator-item.active {
-    background-color: pink
+    background-color: #E5A3AD
 }
 
 .logo {
@@ -33,11 +33,11 @@ h2 {
 }
 
 h3 {
-    color: black;
-    background-color: rgba(255,255,255,0.5);
-    font-family: 'Abril Fatface', cursive;
-    /* color:white;
-    background-color: rgba(0, 0, 0, 0.3);  */
+    /* color: black;
+    background-color: rgba(255,255,255,0.5); */
+    font-family: 'Playfair Display', serif;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.3); 
 }
 
 h5 {
@@ -78,16 +78,16 @@ color: black
   
   .card button:hover {
     /* opacity: 0.7; */
-    background-color:pink
+    background-color:#E5A3AD;
 
   }
 
   nav ul li:hover {
-    background-color: pink;
+    background-color:#E5A3AD;
  }
 
  ul li:hover {
-     background-color: pink
+     background-color:#E5A3AD;
  }
 
   .sidenav {

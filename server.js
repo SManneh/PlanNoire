@@ -31,7 +31,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/djrell.jpg",
     name:"Deejay Rell",
-    vendor_category:"Deejay",
+    vendor_category:"Deejays",
     phone_number:"4694322566",
     email:"deejayrell@gmail.com",
     instagram_name:"@deejayrell"
@@ -43,7 +43,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/bode.jpg",
     name:"DJ Bode",
-    vendor_category:"Deejay",
+    vendor_category:"Deejays",
     phone_number:"6825616715",
     email:"",
     instagram_name:"@dj_bode"
@@ -55,7 +55,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/dj-playboy.jpg",
     name:"DJ Playboy",
-    vendor_category:"Deejay",
+    vendor_category:"Deejays",
     phone_number:"2142842145",
     email:"djplayboydallas@gmail.com",
     instagram_name:"@djplayboy"
@@ -67,7 +67,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/djebou.jpeg",
     name:"DJ Ebou",
-    vendor_category:"Deejay",
+    vendor_category:"Deejays",
     phone_number:"4692126636",
     email:"djebou@morefyah.com",
     instagram_name:"@deejayebou"
@@ -79,7 +79,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/djsherry-shay.jpg",
     name:"DJ SherryShay",
-    vendor_category:"Deejay",
+    vendor_category:"Deejays",
     phone_number:"8172622029",
     email:"djsherryshay@gmail.com",
     instagram_name:"@djsherryshay"
@@ -91,7 +91,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/ashley.jpeg",
     name:"BeautybyAshleyOhh",
-    vendor_category:"MUA",
+    vendor_category:"Make Up Artists",
     phone_number:"4693215805",
     email:"beautybyashleyohh@gmail.com",
     instagram_name:"@beautybyashleyohh"
@@ -103,7 +103,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/stace.jpeg",
     name:"StaceFace Beauty Bar",
-    vendor_category:"MUA",
+    vendor_category:"Make Up Artists",
     phone_number:"5124829004",
     email:"info@stacefacebeauty.com",
     instagram_name:"@staceface_beauty"
@@ -115,7 +115,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/fade.jpg",
     name:"Fade Eros MUA",
-    vendor_category:"MUA",
+    vendor_category:"Make Up Artists",
     phone_number:"2144349313",
     email:"",
     instagram_name:"@fade_eros"
@@ -127,7 +127,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/stella.jpeg",
     name:"Stella Lyons",
-    vendor_category:"MUA",
+    vendor_category:"Make Up Artists",
     phone_number:"4692634252",
     email:"makeupbystellez@gmail.com",
     instagram_name:"@makeupbystelle"
@@ -139,7 +139,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     image:"./images/fernorm.jpeg",
     name:"Fernorm Faces",
-    vendor_category:"MUA",
+    vendor_category:"Make Up Artists",
     phone_number:"9727559704",
     email:"fernormfaces@gmail.com",
     instagram_name:"@fernormfaces"
@@ -212,7 +212,7 @@ db.sequelize.sync().then(function() {
   db.Vendors.create({
     name:"Noire Babes",
     image:"./images/noire.JPG",
-    vendor_category:"bartenders",
+    vendor_category:"Bartenders",
     phone_number:"4694322566",
     email:"noireagency@gmail.com",
     instagram_name:"@noireagency"
