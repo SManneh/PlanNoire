@@ -16,7 +16,7 @@ module.exports = function(app) {
       });
     });
   
-    app.get('/api/products/:category', function(req, res){
+    app.get('/api/products/:vendor_category', function(req, res){
       db.Products.findAll({where : {vendor_category: req.params.Photographers}})
       .then(function(data){
           res.json(data);

@@ -1,23 +1,52 @@
 nav {
-padding: 50px;
+padding: -10px;
 background-color: black;
 margin-bottom: 20px;
 width: 100%
 }
 
 .slider {
-    margin-top: 20px;
+    margin-top: 120px;
     width:100%
   
-
 }
 
-img{
-    width:300px
+.sliderImage {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.indicator-item.active {
+    background-color: pink
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 54px;
+    margin-top: 48px
+}
+
+
 
 h2 {
     font-size: 24px
+}
+
+h3 {
+    color: black;
+    background-color: rgba(255,255,255,0.5);
+    font-family: 'Abril Fatface', cursive;
+    /* color:white;
+    background-color: rgba(0, 0, 0, 0.3);  */
+}
+
+h5 {
+    color: black;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.grey-text.text-lighten-3 {
+color: black
 }
 
 .card {
@@ -48,5 +77,26 @@ h2 {
   }
   
   .card button:hover {
-    opacity: 0.7;
+    /* opacity: 0.7; */
+    background-color:pink
+
+  }
+
+  nav ul li:hover {
+    background-color: pink;
+ }
+
+ ul li:hover {
+     background-color: pink
+ }
+
+  .sidenav {
+      background-color: rgba(0, 0, 0, 0.8);
+
+  }
+
+  .sidenav li>a {
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 18px
   }

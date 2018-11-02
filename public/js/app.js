@@ -11,6 +11,10 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
   });
 
+
+
+  $(".dropdown-trigger").dropdown();
+
 $.ajax({
     url:"/api/vendors",
     method: "GET"
@@ -37,9 +41,10 @@ $.ajax({
 })
 
 $.ajax({
-    url:"api/vendors/:",
+    url:`api/vendors/${Photographers}`,
     method:"GET"
 }).then(function(response){
+    console.log(response)
 
 
 })
