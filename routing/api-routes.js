@@ -26,4 +26,23 @@ module.exports = function(app) {
       })
       });
 
+
+      app.get("/api/vendor/:id", function(req,res){
+        db.Vendors.findAll({where:{id:req.params.id}})
+        .then(function(response){
+          console.log(response)
+          res.json(response);
+        }).catch(function(error){
+          res.json({error:error});
+        })
+      
+      })
+
+
+
+
+
+
+
+
 }

@@ -100,3 +100,43 @@ color: black
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 18px
   }
+
+  /* label color */
+  .input-field label {
+    color:#9e9e9e;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color:#E5A3AD;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #E5A3AD;
+    box-shadow: 0 1px 0 0 #E5A3AD;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #E5A3AD;
+    box-shadow: 0 1px 0 0 #E5A3AD;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid red;
+    box-shadow: 0 1px 0 0 red;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #E5A3AD;
+  }
+    
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color:#E5A3AD !important;
+    background-image: none !important;
+    color:#E5A3AD !important;
+  }
+
+  input.valid[type=text]:not(.browser-default), input.valid[type=text]:not(.browser-default):focus,{
+    border-bottom: 1px solid #e5a3ad;
+    -webkit-box-shadow: 0 1px 0 0 #e5a3ad;
+    box-shadow: 0 1px 0 0 #e5a3ad;
+  }

@@ -12,9 +12,10 @@ $(document).ready(function(){
   });
 
 
-
   $(".dropdown-trigger").dropdown();
 
+
+// call to display all vendor data and to dynamically append them on the page
 $.ajax({
     url:"/api/vendors",
     method: "GET"
@@ -27,20 +28,20 @@ $.ajax({
         let cardDiv = $('<div>').addClass('card')
         let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
         let h2 = $('<h2>').text(item.name);
-        let price = $('<p>').text(item.vendor_category);
-        let submit = $('<button>').text('Booking Info').addClass('submit').attr('data-target', "modal1").addClass('modal-trigger');
+        let category = $('<p>').text(item.vendor_category);
+        let submit = $(`<button class="submit" data-id=${item.id}>Booking Info</button>`)
         // let phoneNumber = $('<p>').text(item.phone_number);
         // let email = $('<p>').text(item.email);
         // let igName = $('<p>').text(item.instagram_name);
       
-        cardDiv.append(image, h2, price, submit)
+        cardDiv.append(image, h2, category, submit)
         col.append(cardDiv)
         row.append(col)
     }
     $("#card-div").append(row);
 })
 
-
+// function to pass selected category to ajax call to display data
 const selectCat = function(event){
     event.preventDefault();
     console.log($(this).text());
@@ -48,9 +49,13 @@ const selectCat = function(event){
 }
 
 
+
+// function to call  category pages to display selected category data from navbar
 const getVendors = function(vendor_category){
 $('#card-div').empty()
 
+
+// call for category pages to display selected category data from navbar
 $.ajax({
     url: `api/vendors/${vendor_category}`,
     method:"GET"
@@ -65,11 +70,10 @@ $.ajax({
         let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
         let h2 = $('<h2>').text(item.name);
         let price = $('<p>').text(item.vendor_category);
-        let submit = $('<button>').text('Booking Info').addClass('submit').attr('data-target', "modal1").addClass('modal-trigger');
+        let submit = $(`<button class="submit modal-trigger" data-target="modal1" data-id=${item.id}>Booking Info</button>`)
         // let phoneNumber = $('<p>').text(item.phone_number);
         // let email = $('<p>').text(item.email);
         // let igName = $('<p>').text(item.instagram_name);
-      
         cardDiv.append(image, h2, price, submit)
         col.append(cardDiv)
         row.append(col)
@@ -80,6 +84,27 @@ $.ajax({
 
 }
 
+// call to display selected vendor infor on modal
+// $.ajax({
+//     url
+// })
+
+$("#card-div").on("click", ".submit", function(event){
+    event.preventDefault();
+    console.log("click click");
+    let id = $(this).data("id");
+    console.log("Id is " + id);
+    $.ajax({
+        url:"/api/vendor/" + id,
+        method:"GET"
+    }).then(function(response){
+        console.log("Response", response);
+        let vendor = response[0]
+        $('#modal1').trigger('focus');
+    })
+})
+
+// onclick function for nav bar categories
 $('#photo').on('click', selectCat );
 $('#mua').on('click', selectCat);
 $('#dj').on('click', selectCat);
