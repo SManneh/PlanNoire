@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('.modal').modal();
   });
@@ -16,30 +17,30 @@ $(document).ready(function(){
 
 
 // call to display all vendor data and to dynamically append them on the page
-$.ajax({
-    url:"/api/vendors",
-    method: "GET"
-}).then(function(response){
-    console.log(response)
-    let row = $('<div>').addClass('row center-cols center align');
-    for(let i = 0; i < 6; i++){
-        let item = response[i];
-        let col = $('<div>').addClass('col s6 m4 12')
-        let cardDiv = $('<div>').addClass('card')
-        let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
-        let h2 = $('<h2>').text(item.name);
-        let category = $('<p>').text(item.vendor_category);
-        let submit = $(`<button class="submit" data-id=${item.id}>Booking Info</button>`)
-        // let phoneNumber = $('<p>').text(item.phone_number);
-        // let email = $('<p>').text(item.email);
-        // let igName = $('<p>').text(item.instagram_name);
+// $.ajax({
+//     url:"/api/vendors",
+//     method: "GET"
+// }).then(function(response){
+//     console.log(response)
+//     let row = $('<div>').addClass('row center-cols center align');
+//     for(let i = 0; i < 6; i++){
+//         let item = response[i];
+//         let col = $('<div>').addClass('col s6 m4 12')
+//         let cardDiv = $('<div>').addClass('card')
+//         let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
+//         let h2 = $('<h2>').text(item.name);
+//         let category = $('<p>').text(item.vendor_category);
+//         let submit = $(`<button class="submit" data-id=${item.id}>Booking Info</button>`)
+//         // let phoneNumber = $('<p>').text(item.phone_number);
+//         // let email = $('<p>').text(item.email);
+//         // let igName = $('<p>').text(item.instagram_name);
       
-        cardDiv.append(image, h2, category, submit)
-        col.append(cardDiv)
-        row.append(col)
-    }
-    $("#card-div").append(row);
-})
+//         cardDiv.append(image, h2, category, submit)
+//         col.append(cardDiv)
+//         row.append(col)
+//     }
+//     $("#card-div").append(row);
+// })
 
 // function to pass selected category to ajax call to display data
 const selectCat = function(event){
@@ -48,6 +49,15 @@ const selectCat = function(event){
     getVendors($(this).text())
 }
 
+
+// side nav function to append selected category on page
+$(".categoryClick").on("click", function(event){
+    event.preventDefault();
+    let categoryChoice = $(this).text();
+    console.log(categoryChoice);
+    getVendors(categoryChoice);
+   
+})
 
 
 // function to call  category pages to display selected category data from navbar
@@ -70,10 +80,10 @@ $.ajax({
         let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
         let h2 = $('<h2>').text(item.name);
         let price = $('<p>').text(item.vendor_category);
-        let submit = $(`<button class="submit modal-trigger" data-target="modal1" data-id=${item.id}>Booking Info</button>`)
-        // let phoneNumber = $('<p>').text(item.phone_number);
-        // let email = $('<p>').text(item.email);
-        // let igName = $('<p>').text(item.instagram_name);
+        let submit = $(`<button class="submit" data-id=${item.id}>Booking Info</button>`)
+        let phoneNumber = $('<p>').text(item.phone_number);
+        let email = $('<p>').text(item.email);
+        let igName = $('<p>').text(item.instagram_name);
         cardDiv.append(image, h2, price, submit)
         col.append(cardDiv)
         row.append(col)
@@ -84,23 +94,24 @@ $.ajax({
 
 }
 
-// call to display selected vendor infor on modal
-// $.ajax({
-//     url
-// })
 
-$("#card-div").on("click", ".submit", function(event){
+$("#card-div").on("click", ".submit", function (event) {
     event.preventDefault();
-    console.log("click click");
     let id = $(this).data("id");
-    console.log("Id is " + id);
+
     $.ajax({
-        url:"/api/vendor/" + id,
-        method:"GET"
-    }).then(function(response){
-        console.log("Response", response);
-        let vendor = response[0]
-        $('#modal1').trigger('focus');
+        url: "/api/vendor/" + id,
+        method: "GET"
+    }).then(function (response) {
+        console.log("SINGLE", response);
+        let vendor = response[0];
+        $(".modal-content").empty();
+        $(".modal-content").append(`<h2>${vendor.name}</h2>`)
+        $(".modal-content").append(`<p>${vendor.phone_number}</p>`)
+        $(".modal-content").append(`<p>${vendor.email}</p>`)
+        $(".modal-content").append(`<p>${vendor.instagram_name}</p>`)
+
+        $('.modal').modal('open');
     })
 })
 

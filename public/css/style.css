@@ -140,3 +140,26 @@ color: black
     -webkit-box-shadow: 0 1px 0 0 #e5a3ad;
     box-shadow: 0 1px 0 0 #e5a3ad;
   }
+
+  .page-footer {
+    padding-top: 12px;
+    color: #fff;
+    background-color: black;
+}
+
+
+  @media only screen and (max-width: 600px) {
+    .logo {
+        width: 83%;
+        margin-left: -17px;
+        margin-top: 53px;
+    }
+  
+
+    .page-footer {
+        padding-top: 70px;
+}
+
+
+
+  }
