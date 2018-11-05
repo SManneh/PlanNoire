@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
     $('.modal').modal();
+    $('.modal2').modal();
   });
 
 
@@ -14,6 +15,31 @@ $(document).ready(function(){
 
 
   $(".dropdown-trigger").dropdown();
+
+  $('#submit').on('click', function(){
+      const name = $("#name").val()
+      const vendorCat = $("#vendor_category").val()
+      const number = $("#phone_number").val()
+      const email = $("#email").val()
+      const igName = $("#instagram_name").val()
+      const image = $("#image").val()
+
+      const venderInfo  = {
+          name: name, 
+          vendorCat: vendorCat, 
+          number: number, 
+          email: email, 
+          igName: igName,
+          image: image
+      }
+
+      $.post('/api/vendors', venderInfo, function(res){
+        console.log(res, "This is the response");
+        $(".modal").modal("open")
+
+      });
+
+  })
 
 
 // call to display all vendor data and to dynamically append them on the page
@@ -72,8 +98,9 @@ $.ajax({
 }).then(function(response){
     console.log(response)
     console.log(response)
+    $("#card-div").empty();
     let row = $('<div>').addClass('row center-cols center align');
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < response.length; i++){
         let item = response[i];
         let col = $('<div>').addClass('col s6 m4 12')
         let cardDiv = $('<div>').addClass('card')

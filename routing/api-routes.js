@@ -15,6 +15,8 @@ module.exports = function(app) {
         res.json({ error: error });
       });
     });
+
+    
   
     app.get('/api/vendors/:vendor_category', function(req, res){
 
@@ -38,7 +40,21 @@ module.exports = function(app) {
       
       })
 
+      app.post('/api/vendors', function(req,res) {
+        const newVendor = req.body;
+        console.log(newVendor)
+        db.Vendors.create({
+          name: newVendor.name,
+          vendor_category: newVendor.vendorCat,
+          phone_number: newVendor.number,
+          email: newVendor.email,
+          instagram_name: newVendor.igName,
+          image: newVendor.image,
+        }).then(result => {
+            res.send(result)
+        })
 
+      });
 
 
 
