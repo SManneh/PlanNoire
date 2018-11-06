@@ -32,6 +32,8 @@ $(document).ready(function(){
 //   }
 
 
+
+
   $('#submit').on('click', function(event){
       event.preventDefault();
       const name = $("#name").val()
@@ -164,9 +166,9 @@ $("#card-div").on("click", ".submit", function (event) {
         let vendor = response[0];
         $(".modal-content").empty();
         $(".modal-content").append(`<h2>${vendor.name}</h2>`)
-        $(".modal-content").append(`<p>${vendor.phone_number}</p>`)
-        $(".modal-content").append(`<p>${vendor.email}</p>`)
-        $(".modal-content").append(`<p>${vendor.instagram_name}</p>`)
+        $(".modal-content").append(`<p><b>Phone Number: </b>${vendor.phone_number}</p>`)
+        $(".modal-content").append(`<p><b>Email: </b>${vendor.email}</p>`)
+        $(".modal-content").append(`<p><b>Instagram Handle: </b>${vendor.instagram_name}</p>`)
 
         $('.modal').modal('open');
     })

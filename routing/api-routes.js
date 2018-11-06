@@ -20,7 +20,7 @@ module.exports = function(app) {
   
     app.get('/api/vendors/:vendor_category', function(req, res){
 
-      db.Vendors.findAll({where : {vendor_category: req.params.vendor_category}})
+      db.Vendors.findAll({where : {vendor_category: req.params.vendor_category, isApproved:true}})
       .then(function(data){
           res.json(data);
       }).catch(function(error){
