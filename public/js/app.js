@@ -13,10 +13,27 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
   });
 
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+      
 
   $(".dropdown-trigger").dropdown();
 
-  $('#submit').on('click', function(){
+
+//   function checkForm(form)
+//   {
+   
+//     if(form.inputfield.value == "") {
+//       alert("Error: Input is empty!");
+//       form.inputfield.focus();
+//       return false;
+//     }
+//   }
+
+
+  $('#submit').on('click', function(event){
+      event.preventDefault();
       const name = $("#name").val()
       const vendorCat = $("#vendor_category").val()
       const number = $("#phone_number").val()
@@ -24,7 +41,7 @@ $(document).ready(function(){
       const igName = $("#instagram_name").val()
       const image = $("#image").val()
 
-      const venderInfo  = {
+      const vendorInfo  = {
           name: name, 
           vendorCat: vendorCat, 
           number: number, 
@@ -33,11 +50,24 @@ $(document).ready(function(){
           image: image
       }
 
-      $.post('/api/vendors', venderInfo, function(res){
+      if(email.indexOf("@") !== -1){
+      $.post('/api/vendors', vendorInfo, function(res){
         console.log(res, "This is the response");
+
+        $("#name").val()
+        $("#vendor_category").val()
+        $("#phone_number").val()
+        $("#email").val()
+        $("#instagram_name").val()
+        $("#image").val()
+
         $(".modal").modal("open")
 
       });
+    }
+    else{
+        alert("Please enter a valid email address")
+    }
 
   })
 
@@ -103,7 +133,7 @@ $.ajax({
     for(let i = 0; i < response.length; i++){
         let item = response[i];
         let col = $('<div>').addClass('col s6 m4 12')
-        let cardDiv = $('<div>').addClass('card')
+        let cardDiv = $('<div>').addClass('card').css("margin-bottom", "100px");
         let image = $('<img>').attr('src', item.image).addClass("responsive-img").attr("width", "300px");
         let h2 = $('<h2>').text(item.name);
         let price = $('<p>').text(item.vendor_category);

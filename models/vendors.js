@@ -17,7 +17,11 @@ module.exports = function(sequelize, DataTypes) {
       },
       instagram_name: {
         type: DataTypes.STRING
+    },
+    isApproved: {
+      type: DataTypes.BOOLEAN, defaultValue:false
     }
+
     });
   
     return Vendors;
