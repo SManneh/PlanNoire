@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
 
-
+//  function to grab form input values and post request to  create a new vendor in the database
   $('#submit').on('click', function(event){
       event.preventDefault();
       const name = $("#name").val()
@@ -153,7 +153,7 @@ $.ajax({
 
 }
 
-
+//on click function and ajax call to get specific info about the selected vendor and append to modal
 $("#card-div").on("click", ".submit", function (event) {
     event.preventDefault();
     let id = $(this).data("id");
