@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./images/planoire2 copy.png" type="image/x-icon">
 </head>
+
 <body>
-    
+
 
 
     <!-- Dropdown Structure -->
- <!-- <ul id="dropdown1" class="dropdown-content">
+    <!-- <ul id="dropdown1" class="dropdown-content">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <li><a id="photo" href="index.html">Photographers</a></li>
         <li><a id="dj" href="index.html">Deejays</a></li>
@@ -29,120 +32,120 @@
         <li class="divider"></li>
     
       </ul>  -->
-        <nav>
-                <div class="nav-wrapper">
-                        <a href="index.html" ><img class="logo" src="images/planoire.png"></a>
-     
-                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  
-                    <li><a href="index.html">Home</a></li> 
-                    <!-- <li><a href="vendorapp.html">Vendor Application</a></li>  -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html"><img class="logo" src="images/planoire.png"></a>
 
-                     <!-- Dropdown Trigger -->
-      <!-- <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Vendor Category<i class="material-icons right">arrow_drop_down</i></a></li> -->
-                  </ul>
-              
-              
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-                  <ul class="sidenav" id="mobile-demo">
-                        <li><a href="index.html">Home</a></li>
-                        <!-- <li><a href="vendorapp.html">Vendor Application</a></li>  -->
-                        <!-- <li><a class="categoryClick" data-id="photo" href="index.html">Photographers</a></li>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="vendorapp.html">Vendor Application</a></li>  -->
+
+                <!-- Dropdown Trigger -->
+                <!-- <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Vendor Category<i class="material-icons right">arrow_drop_down</i></a></li> -->
+            </ul>
+
+
+
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="vendorapp.html">Vendor Application</a></li>  -->
+                <!-- <li><a class="categoryClick" data-id="photo" href="index.html">Photographers</a></li>
                         <li><a class="categoryClick" data-id="dj" href="index.html">Deejays</a></li>
                         <li><a class="categoryClick" data-id="deco" href="index.html">Decorators</a></li>
                         <li><a class="categoryClick" data-id="mua" href="index.html">Make Up Artists</a></li>
                         <li><a class="categoryClick" data-id="bar" href="index.html">Bartenders</a></li>
                         <li><a class="categoryClick" data-id="cater" href="index.html">Caterers</a></li>
                         <li><a class="categoryClick" data-id="venue" href="index.html">Venues</a></li> -->
-                      </ul>
-                </div>
-        </nav>
-              
+            </ul>
+        </div>
+    </nav>
 
 
-<div class="container">
 
-<div id="joinForm">
-        
-    <div class="row">
-        <form class="col s12">
+    <div class="container">
+
+        <div id="joinForm">
+
             <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">account_circle</i>
-                    <input placeholder="Business name" id="name" type="text" class="validate" required>
-                    <label for="name">Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">category</i>
-                    <!-- <input placeholder="Ex. Deejays, Photographers, Make Up Artists, etc" id="vendor_category" type="text" class="validate">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="Business name" id="name" type="text" class="validate" required>
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">category</i>
+                            <!-- <input placeholder="Ex. Deejays, Photographers, Make Up Artists, etc" id="vendor_category" type="text" class="validate">
                     <label for="vendor_category">Vendor Category</label> -->
-                    <select>
-                            <option value="" disabled selected>Choose your category</option>
-                            <option id="vendor_category" value="Photographers">Photographers</option>
-                            <option id="vendor_category" value="Deejays">Deejays</option>
-                            <option id="vendor_category" value="Make Up Artists">Make Up Artists</option>
-                            <option id="vendor_category" value="Bartenders">Bartenders</option>
-                            <option id="vendor_category" value="Caterers">Caterers</option>
-                            <option id="vendor_category" value="Venues">Venues</option>
-                            <option id="vendor_category" value="Decorators">Decorators</option>
+                            <select>
+                                <option value="" disabled selected>Choose your category</option>
+                                <option id="vendor_category" value="Photographers">Photographers</option>
+                                <option id="vendor_category" value="Deejays">Deejays</option>
+                                <option id="vendor_category" value="Make Up Artists">Make Up Artists</option>
+                                <option id="vendor_category" value="Bartenders">Bartenders</option>
+                                <option id="vendor_category" value="Caterers">Caterers</option>
+                                <option id="vendor_category" value="Venues">Venues</option>
+                                <option id="vendor_category" value="Decorators">Decorators</option>
 
-                          </select>
-                          <label>Category</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">phone_iphone</i>
-                    <input id="phone_number" type="text" class="validate">
-                    <label for="phone_number">Phone Number</label>
-                </div>
-            </div>
+                            </select>
+                            <label>Category</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">phone_iphone</i>
+                            <input id="phone_number" type="text" class="validate">
+                            <label for="phone_number">Phone Number</label>
+                        </div>
+                    </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email" data-error="wrong" data-success="right">Email</label>
-                </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">people</i>
+                            <input placeholder="Instagram Handle" id="instagram_name" type="text" class="validate">
+                            <label for="instagram_name">Instagram Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">photo_camera</i>
+                            <input placeholder="url" id="image" type="text" class="validate">
+                            <label for="image">Link to Photo image</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">people</i>
-                    <input placeholder="Instagram Handle" id="instagram_name" type="text" class="validate">
-                    <label for="instagram_name">Instagram Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                        <i class="material-icons prefix">photo_camera</i>
-                    <input placeholder="url" id="image" type="text" class="validate">
-                    <label for="image">Link to Photo image</label>
-                </div>
-            </div>
-        </form>
+        </div>
+        <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+
     </div>
-</div>
-  <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
 
-</div>
-
-  <div id="modal" class="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
-          <h4>Thank you for your submission</h4>
-        <p>Your profile will be posted within 24-48hrs if approved!</p>
+            <h4>Thank you for your submission</h4>
+            <p>Your profile will be posted within 24-48hrs if approved!</p>
         </div>
         <div class="modal-footer">
-          <a href="index.html" class="modal-close waves-effect waves-green btn-flat">close</a>
+            <a href="index.html" class="modal-close waves-effect waves-green btn-flat">close</a>
         </div>
     </div>
 
 
-<!--    
+    <!--    
     <footer class="page-footer">
    
             <div class="footer-copyright">
@@ -154,8 +157,9 @@
           </footer>  -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="/js/app.js"></script>
 </body>
+
 </html>

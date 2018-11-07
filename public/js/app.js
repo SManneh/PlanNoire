@@ -56,12 +56,12 @@ $(document).ready(function(){
       $.post('/api/vendors', vendorInfo, function(res){
         console.log(res, "This is the response");
 
-        $("#name").val()
-        $("#vendor_category").val()
-        $("#phone_number").val()
-        $("#email").val()
-        $("#instagram_name").val()
-        $("#image").val()
+        $("#name").val("")
+        $("#vendor_category").val("")
+        $("#phone_number").val("")
+        $("#email").val("")
+        $("#instagram_name").val("")
+        $("#image").val("")
 
         $(".modal").modal("open")
 
